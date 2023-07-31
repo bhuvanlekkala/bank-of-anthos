@@ -57,6 +57,17 @@ The following button opens up an interactive tutorial showing how to deploy Bank
 3. Set the Google Cloud project and region and ensure the Google Kubernetes Engine API is enabled.
 
    ```sh
+ gcloud config set project <your project ID>
+command to set the project ID for your Cloud Shell session
+
+gcloud container clusters create-auto bank-of-anthos --<your project ID> --region=us-central1
+
+using containers to create
+
+gcloud services enable container.googleapis.com
+
+enable apis required
+   
    export PROJECT_ID=<PROJECT_ID>
    export REGION=us-central1
    gcloud services enable container.googleapis.com \
